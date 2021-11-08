@@ -14,49 +14,49 @@ public class PatchsEspecialistasController {
 
     @Autowired private PessoaService pessoaService;
 
-    @PatchMapping(name = "idPessoa")
+    @PatchMapping(value = "/alterar_email/{idPessoa}")
     public ResponseEntity<AlterarEmailPessoaDto> atualizaPessoa(
             @Valid @RequestBody AlterarEmailPessoaDto dto, @PathVariable Integer idPessoa) {
         var pessoa = this.pessoaService.atualizaPessoa(dto);
         return ResponseEntity.ok(dto);
     }
 
-    @PatchMapping(name = "idPessoa")
+    @PatchMapping(value = "alterar_idade/{idPessoa}")
     public ResponseEntity<AlterarIdadePessoaDto> atualizaPessoa(
             @Valid @RequestBody AlterarIdadePessoaDto dto, @PathVariable Integer idPessoa) {
         var pessoa = this.pessoaService.atualizaPessoa(dto);
         return ResponseEntity.ok(dto);
     }
 
-    @PatchMapping(name = "idPessoa")
+    @PatchMapping(value = "/alterar_nome/{idPessoa}")
     public ResponseEntity<AlterarNomePessoaDto> atualizaPessoa(
             @Valid @RequestBody AlterarNomePessoaDto dto, @PathVariable Integer idPessoa) {
         var pessoa = this.pessoaService.atualizaPessoa(dto);
         return ResponseEntity.ok(dto);
     }
 
-    //@PatchMapping(name = "idPessoa")
+    @PatchMapping(value = "/alterar_nome_idade/{idPessoa}")
     public ResponseEntity<AlterarNomeIdadeDto> atualizaPessoa(
             @Valid @RequestBody AlterarNomeIdadeDto dto, @PathVariable Integer idPessoa) {
         var pessoa = this.pessoaService.atualizaPessoa(dto);
         return ResponseEntity.ok(dto);
     }
 
-    //@PatchMapping(name = "idPessoa")
+    @PatchMapping(value = "/alterar_nome_email/{idPessoa}")
     public ResponseEntity<AlterarNomeEmailDto> atualizaPessoa(
             @Valid @RequestBody AlterarNomeEmailDto dto, @PathVariable Integer idPessoa) {
         var pessoa = this.pessoaService.atualizaPessoa(dto);
         return ResponseEntity.ok(dto);
     }
 
-    //@PatchMapping(name = "idPessoa")
+    @PatchMapping(value = "/alterar_idade_email/{idPessoa}")
     public ResponseEntity<AlterarIdadeEmailDto> atualizaPessoa(
             @Valid @RequestBody AlterarIdadeEmailDto dto, @PathVariable Integer id) {
         var pessoa = this.pessoaService.atualizaPessoa(dto);
         return ResponseEntity.ok(dto);
     }
 
-    //@PatchMapping(name = "idPessoa")
+    @PatchMapping(value = "/{idPessoa}")
     public ResponseEntity<AlterarPessoaDto> atualizaPessoa(
             @Valid @RequestBody AlterarPessoaDto dto, @PathVariable Integer idPessoa) {
         var pessoa = this.pessoaService.atualizaPessoa(dto);
