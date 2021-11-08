@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS Pessoas;
+DROP TABLE IF EXISTS Carros;
+
+CREATE TABLE Pessoas (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  nome VARCHAR(250) NOT NULL,
+  idade Integer NOT NULL,
+  email VARCHAR(250) DEFAULT NULL,
+  id_carro Integer
+);
+
+CREATE Table Carros (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  modelo VARCHAR(250) NOT NULL,
+  marca VARCHAR(250)
+)
